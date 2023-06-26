@@ -53,7 +53,7 @@ const sigiliu: ISigiliu = {
         color: '#ccc'
     },
     9: {
-        x: '176.87',
+        x: '167.87',
         y: ' 111.05',
         color: '#ff9ae8'
     },
@@ -61,38 +61,65 @@ const sigiliu: ISigiliu = {
 
 
 const RunaImage = (props: IPropsRunaImage) => {
+    // function calculateRotation(x1: number, y1: number, x2: number, y2: number)
+
+    function calculateRotation(x1: any, y1: any, x2: any, y2: any) {
+        const dx = x2 - x1;
+        const dy = y2 - y1;
+        return Math.atan2(dy, dx) * (180 / Math.PI);
+    }
 
     const getSvgLines = (num: number) => {
 
         let arr = (num + '').split('');
         let lines = [];
+        let gradients = [];
 
         for (let i = 1; i < arr.length; i++) {
 
             let prevPoint = sigiliu[arr[i - 1]];
             let currentPoint = sigiliu[arr[i]];
-            const NewLine = (<line x1={prevPoint.x}
+
+            const rotationAngle = calculateRotation(prevPoint.x, prevPoint.y, currentPoint.x, currentPoint.y)
+
+            const newGradient = (<linearGradient
+                id={`gradient${i}`}
+                // gradientUnits="userSpaceOnUse" 
+                x1="0%" y1="0%" x2="100%" y2="100%"
+                // gradientTransform={`rotate(${rotationAngle})`}
+                // x1={prevPoint.x}
+                // y1={prevPoint.y}
+                // x2={currentPoint.x}
+                // y2={currentPoint.y}
+            >
+                <stop offset="0%" stop-color={prevPoint.color}/>
+                <stop offset="100%" stop-color={currentPoint.color} />
+            </linearGradient>);
+
+            gradients.push(newGradient);
+
+            // <linearGradient id="gradient" gradientUnits="userSpaceOnUse"
+            // x1="x1-coordinate" y1="y1-coordinate" x2="x2-coordinate" y2="y2-coordinate"
+            // gradientTransform="rotate(rotation-angle, x1-coordinate, y1-coordinate)">
+            // <stop offset="0%" stop-color="color-for-point-A" />
+            // <stop offset="100%" stop-color="color-for-point-B" />
+            // </linearGradient>
+
+            const newLine = (<line 
+                x1={prevPoint.x}
                 y1={prevPoint.y}
                 x2={currentPoint.x}
                 y2={currentPoint.y}
-                stroke={currentPoint.color}
+                // stroke={currentPoint.color}
+                stroke={`url(#gradient${i})`}
                 strokeWidth={10}
             />
 
             )
-            let line = `
-            <line
-                x1="${prevPoint.x}"
-                y1="${prevPoint.y}"
-                x2="${currentPoint.x}" 
-                y2="${currentPoint.y}"
-                stroke-width="10"
-                stroke="${prevPoint.color}"
-                />
-            `;
-            lines.push(NewLine);
+
+            lines.push(newLine);
         }
-        return lines;
+        return [lines, gradients];
     }
 
     return <div>
@@ -101,12 +128,12 @@ const RunaImage = (props: IPropsRunaImage) => {
 
         <svg id="Layer_2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688.2 688.2">
             <defs>
-
+                {getSvgLines(props.runaNumber)[1]}
             </defs>
             <title>RunaSeal</title>
             <circle cx="340.6" cy="339.83" r="286.59"
                 fill="#cce7ff" fill-opacity="0.2" stroke="#858585" stroke-width="5" />
-            {getSvgLines(props.runaNumber)}
+            {getSvgLines(props.runaNumber)[0]}
             <circle cx="340.56" cy="53.25" r="6.5" />
             <circle cx="340.6" cy="626.42" r="6.5" />
             <circle cx="167.86" cy="111.05" r="6.5" />
