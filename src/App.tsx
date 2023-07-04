@@ -1,19 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-import Navigation from './components/Navigation';
-import RunaImage from './components/RunaImage';
+import { useState } from "react";
+import Navigation from "./components/Navigation";
+import RunaImage from "./components/RunaImage";
+import { Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import RunaCalcPage from "./pages/RunaCalcPage";
+import SingleRunaPage from "./pages/SingleRunaPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Navigation />
 
-      <div className="container">
-        page content here
-        <RunaImage runaNumber={163851} />
-      </div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/runa/:id" element={<SingleRunaPage />} />
+        <Route path="/runa-calculator" element={<RunaCalcPage />} />
+      </Routes>
     </>
   );
 }

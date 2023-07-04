@@ -10,56 +10,55 @@ interface ISeal {
 }
 const seal: ISeal = {
   1: {
-    x: '340.56',
-    y: ' 53.25',
-    color: '#FF0000',
+    x: "340.56",
+    y: " 53.25",
+    color: "#FF0000",
   },
   2: {
-    x: '513.02',
-    y: ' 111.5',
-    color: '#FFA500',
+    x: "513.02",
+    y: " 111.5",
+    color: "#FFA500",
   },
   3: {
-    x: '615.68',
-    y: ' 258.99',
-    color: '#ff0',
+    x: "615.68",
+    y: " 258.99",
+    color: "#ff0",
   },
   4: {
-    x: '610.37',
-    y: ' 436.02',
-    color: '#bfff00',
+    x: "610.37",
+    y: " 436.02",
+    color: "#bfff00",
   },
   5: {
-    x: '504.92',
-    y: ' 574.53',
-    color: '#00cbff',
+    x: "504.92",
+    y: " 574.53",
+    color: "#00cbff",
   },
   6: {
-    x: '176.26',
-    y: ' 574.55',
-    color: '#0b00b8',
+    x: "176.26",
+    y: " 574.55",
+    color: "#0b00b8",
   },
   7: {
-    x: '70.55',
-    y: ' 436.11',
-    color: '#ff3fe6',
+    x: "70.55",
+    y: " 436.11",
+    color: "#ff3fe6",
   },
   8: {
-    x: '63.46',
-    y: ' 258.97',
-    color: '#ccc',
+    x: "63.46",
+    y: " 258.97",
+    color: "#ccc",
   },
   9: {
-    x: '167.87',
-    y: ' 111.05',
-    color: '#ff9ae8',
+    x: "167.87",
+    y: " 111.05",
+    color: "#ff9ae8",
   },
 };
 
 const RunaImage = (props: IPropsRunaImage) => {
-
   const getSvgLinesAndGradients = (num: number) => {
-    const arr = (num + '').split('');
+    const arr = (num + "").split("");
     const lines = [];
     const gradients = [];
 
@@ -106,15 +105,33 @@ const RunaImage = (props: IPropsRunaImage) => {
 
   return (
     <div>
-      runa image: {props.runaNumber}
-      <svg id="Layer_2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688.2 688.2">
+      <svg
+        id="Layer_2"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 688.2 688.2"
+      >
         <defs>{gradients}</defs>
         <title>RunaSeal</title>
-        <circle cx="340.6" cy="339.83" r="286.59" fill="#cce7ff" fill-opacity="0.2" stroke="#858585" stroke-width="5" />
+        <circle
+          cx="340.6"
+          cy="339.83"
+          r="286.59"
+          fill="#cce7ff"
+          fill-opacity="0.2"
+          stroke="#858585"
+          stroke-width="5"
+        />
         {lines}
 
         {Object.keys(seal).map((key, idx) => (
-          <circle key={key} cx={seal[key].x} cy={seal[key].y} r={7} fill={seal[key].color} />
+          <circle
+            key={key}
+            cx={seal[key].x}
+            cy={seal[key].y}
+            r={7}
+            fill={seal[key].color}
+          />
         ))}
         <text transform="translate(333.76 40.47)" fontSize={20}>
           1
