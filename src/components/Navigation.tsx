@@ -7,14 +7,17 @@ const Navigation = () => {
     items-center font-semibold text-lg bg-slate-100 text-gray-800"
     >
       <Link to={"/"}>
-        <span>RUNA Calculator</span>
+        <span>Calculator Rune Personale</span>
       </Link>
       <div className="flex items-center gap-4">
         <Link to={"/runa-calculator"}>
-          <span>About us</span>
+          <span>ᚱUNA</span>
         </Link>
         <Link to={"/runa-calculator"}>
-          <span>Calculator</span>
+          <span>Călătorii</span>
+        </Link>
+        <Link to={"/CristaleEterice"}>
+          <span>Cristale Eterice</span>
         </Link>
       </div>
     </div>

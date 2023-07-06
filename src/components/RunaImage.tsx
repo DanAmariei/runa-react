@@ -104,7 +104,7 @@ const RunaImage = (props: IPropsRunaImage) => {
   const { lines, gradients } = getSvgLinesAndGradients(props.runaNumber);
 
   return (
-    <div>
+    <div className="w-full flex-grow min-w-[250px]">
       <svg
         id="Layer_2"
         data-name="Layer 1"
@@ -118,7 +118,7 @@ const RunaImage = (props: IPropsRunaImage) => {
           cy="339.83"
           r="286.59"
           fill="#cce7ff"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
           stroke="#858585"
           stroke-width="5"
         />
