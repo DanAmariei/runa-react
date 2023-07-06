@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import * as Tone from "tone";
 interface INotePlayerProps {
   notes: string[];

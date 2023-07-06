@@ -1,6 +1,4 @@
-import { useState } from "react";
 import Navigation from "./components/Navigation";
-import RunaImage from "./components/RunaImage";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import RunaCalcPage from "./pages/RunaCalcPage";

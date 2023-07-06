@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 import { runeNames } from "../helper/runenames";
 import { musicNotes } from "../helper/musicnotes";
 
@@ -28,20 +28,20 @@ const CalculatorForm = ({ onSubmit }: IPropsCalculatorForm) => {
     return res;
   };
 
-  // letter index goes from 1 to 31
-  const nameToNumbersAll = (name: string) => {
-    let res: number[] = [];
+  // // letter index goes from 1 to 31
+  // const nameToNumbersAll = (name: string) => {
+  //   let res: number[] = [];
 
-    name
-      .toLowerCase()
-      .split("")
-      .forEach((letter) => {
-        const letterIndex = alphabet.indexOf(letter) + 1;
-        res.push(letterIndex);
-      });
+  //   name
+  //     .toLowerCase()
+  //     .split("")
+  //     .forEach((letter) => {
+  //       const letterIndex = alphabet.indexOf(letter) + 1;
+  //       res.push(letterIndex);
+  //     });
 
-    return res;
-  };
+  //   return res;
+  // };
 
   // if letter index is bigger than 9 then sum the digits
   const nameToNumbersSmall = (name: string) => {
@@ -88,7 +88,7 @@ const CalculatorForm = ({ onSubmit }: IPropsCalculatorForm) => {
       res.push(newNumber);
       num = newNumber;
     }
-    return res.map((element, idx) => {
+    return res.map((element) => {
       return sumNumberDigits(element);
     });
   };
@@ -110,7 +110,7 @@ const CalculatorForm = ({ onSubmit }: IPropsCalculatorForm) => {
 
   const numbersToRune = (numbers: number[]) => {
     return numbers
-      .map((num, idx) => {
+      .map((num) => {
         let runaIndex = num % 24;
 
         if (runaIndex === 0) {

@@ -124,7 +124,7 @@ const RunaImage = (props: IPropsRunaImage) => {
         />
         {lines}
 
-        {Object.keys(seal).map((key, idx) => (
+        {Object.keys(seal).map((key) => (
           <circle
             key={key}
             cx={seal[key].x}
