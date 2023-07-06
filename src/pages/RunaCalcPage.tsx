@@ -33,6 +33,7 @@ const RunaCalcPage = () => {
     setRunaNumber(result.runaGasUnique);
     setRunaResult(result);
   };
+  const runaNotesString = runaResult?.runaNotes?.join(" - ");
 
   return (
     <div className=" p-2 mx-auto lg:px-10">
@@ -63,10 +64,13 @@ const RunaCalcPage = () => {
             <p>{runaResult?.secondName}</p>
             <p>{runaResult?.birthdate}</p>
             <p>
-              <span className="font-bold">COD Dans Activare Chake: </span>
+              <span className="font-bold">COD Dans Activare Chakre: </span>
               {runaResult?.runaGasUnique}
             </p>
-            <p>{runaResult?.runaNotes}</p>
+
+            <p>
+              <span className="font-bold">Note Muzicale:</span> {runaNotesString}
+            </p>
 
             <div className="flex flex-wrap items-center">
               {runaResult &&
