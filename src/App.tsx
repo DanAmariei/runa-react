@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import RunaCalcPage from "./pages/RunaCalcPage";
 import SingleRunaPage from "./pages/SingleRunaPage";
 import CristaleEterice from "./pages/CristaleEterice";
+import Calatorii from "./pages/Calatorii";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/runa/:id" element={<SingleRunaPage />} />
         <Route path="/runa-calculator" element={<RunaCalcPage />} />
+        <Route path="/Calatorii" element={<Calatorii />} />
         <Route path="/CristaleEterice" element={<CristaleEterice />} />
       </Routes>
     </>
