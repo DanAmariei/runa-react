@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { runes } from "../helper/runes";
 import RunaLeftSidebar from "../components/runa/RunaLeftSidebar";
 import RunaRightSidebar from "../components/runa/RunaRightSidebar";
