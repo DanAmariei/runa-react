@@ -1,4 +1,4 @@
-interface IRuna {
+export interface IRuna {
   title: string;
   image?: string;
   content?: string;
@@ -13,6 +13,8 @@ interface IRuna {
   keytitle?: string;
   keywords?: string;
   keywordsdn?: string;
+  prev?: string;
+  next?: string;
 }
 
 interface IRunaList {
@@ -40,6 +42,8 @@ export const runes: IRunaList = {
       "noroc meritat, stabilitate financiară, utilizare în comun, succes în dragoste, prosperitate",
     keydn:
       "rău, gelozie, invidie, lăcomie, pierderi economice, eșecuri, sclavie, datorii",
+    prev: "othala",
+    next: "uruz",
   },
   uruz: {
     title: "Uruz",
@@ -47,14 +51,22 @@ export const runes: IRunaList = {
     keywords: "Sănătate • Rezistență • Spirit de voință",
     keywordsdn: "Imobilitate • Lipsă de energie • Fragilitate",
     titleamulet: "Folosirea Runei ca Amuletă:",
-    amulet: "Insuflă vitalitate, curaj în fața obstacolelor și ajută la eliminarea îndoielilor și a temerilor. Dă determinare pentru realizarea de noi proiecte (în relații, la locul de muncă, în afaceri), luciditate și curaj de a face față unor decizii importante, atunci când avem acest drept.",
+    amulet:
+      "Insuflă vitalitate, curaj în fața obstacolelor și ajută la eliminarea îndoielilor și a temerilor. Dă determinare pentru realizarea de noi proiecte (în relații, la locul de muncă, în afaceri), luciditate și curaj de a face față unor decizii importante, atunci când avem acest drept.",
     messagetitle: "Mesajul:",
-    message: "Dă putere, vitalitate și determinare în fața obstacolelor, ajută la depășirea nesiguranței și îndoielilor. Întărește sănătatea și îndepărtează bolile.",
-    details: "Este guvernată de Ymir, gigantul instinctelor primare dezlănțuite. Indică faptul că avem multă energie, pe care știm să o gestionăm cel mai bine pentru a ne satisface nevoile și pentru a vedea cu claritate realitatea. Suntem conștienți de valoarea noastră, de capacitatea noastră fizică și mentală: este timpul să ne eliberăm energiile pentru a obține ceea ce ne dorim. Cu mult curaj și determinare, ne putem îndeplini dorințele, putem depăși provocările pe care viața ni le oferă și putem depăși obstacolele pe această cale. Ar trebui, totuși, să dezvoltăm capacitatea de a gândi, înainte de a acționa, să ne cântărim acțiunile și să ne calibrăm energiile: calmul este o calitate necesară în realizarea cu succes a obiectivelor vieții.",
-    detailsdn: "Uruz inversat relevă pierderea controlului, incapacitatea de a discerne între ficțioune și realitate, între bine și rău. De asemena, indică disperare, oboseală fizică, nervozitate, frică, incapacitatea de a ne controla cele mai întunecate instincte. Sau, dimpotrivă poate dezvălui o stare de depresie, incapacitatea de a experimenta plăcerea de orice fel, aplatizare emoțională, ca și cum ne-am simți într-o fază de stagnare: Energia noastră pare să fie blocată și nu poate să curgă liber. Astfel, este necesar ca părțile blocate să se exprime și să fie eliberate cât mai curând posibil, în caz contrar există riscul de a se transforma în ceva distructiv, pentru noi înșine sau pentru alții. Ar trebui să fim plini de calm, de reflecție și de curaj.",
+    message:
+      "Dă putere, vitalitate și determinare în fața obstacolelor, ajută la depășirea nesiguranței și îndoielilor. Întărește sănătatea și îndepărtează bolile.",
+    details:
+      "Este guvernată de Ymir, gigantul instinctelor primare dezlănțuite. Indică faptul că avem multă energie, pe care știm să o gestionăm cel mai bine pentru a ne satisface nevoile și pentru a vedea cu claritate realitatea. Suntem conștienți de valoarea noastră, de capacitatea noastră fizică și mentală: este timpul să ne eliberăm energiile pentru a obține ceea ce ne dorim. Cu mult curaj și determinare, ne putem îndeplini dorințele, putem depăși provocările pe care viața ni le oferă și putem depăși obstacolele pe această cale. Ar trebui, totuși, să dezvoltăm capacitatea de a gândi, înainte de a acționa, să ne cântărim acțiunile și să ne calibrăm energiile: calmul este o calitate necesară în realizarea cu succes a obiectivelor vieții.",
+    detailsdn:
+      "Uruz inversat relevă pierderea controlului, incapacitatea de a discerne între ficțioune și realitate, între bine și rău. De asemena, indică disperare, oboseală fizică, nervozitate, frică, incapacitatea de a ne controla cele mai întunecate instincte. Sau, dimpotrivă poate dezvălui o stare de depresie, incapacitatea de a experimenta plăcerea de orice fel, aplatizare emoțională, ca și cum ne-am simți într-o fază de stagnare: Energia noastră pare să fie blocată și nu poate să curgă liber. Astfel, este necesar ca părțile blocate să se exprime și să fie eliberate cât mai curând posibil, în caz contrar există riscul de a se transforma în ceva distructiv, pentru noi înșine sau pentru alții. Ar trebui să fim plini de calm, de reflecție și de curaj.",
     keytitle: "Instinctul de supraviețuire",
-    keyup: "tărie fizică și morală, curaj, vitalitate, inițiativă, independență, inventivitate",
-    keydn: "ferocitate, masculinitate, rigiditate, amorțeală, agresiune, dependență, imobilitate",
+    keyup:
+      "tărie fizică și morală, curaj, vitalitate, inițiativă, independență, inventivitate",
+    keydn:
+      "ferocitate, masculinitate, rigiditate, amorțeală, agresiune, dependență, imobilitate",
+      prev: "fehu",
+      next: "thurisaz",
   },
   thurisaz: {
     title: "Thurisaz",
@@ -62,14 +74,18 @@ export const runes: IRunaList = {
     keywords: "Succes • Protecție • Putere",
     keywordsdn: "Meditație • Discreditare • Prundență",
     titleamulet: "Folosirea Runei ca Amuletă:",
-    amulet: "Întărește apărarea împotriva dușmanilor exteriori și a celor din lăuntrul nostru. Promovează luciditatea, capaditatea de reflecție, calmul, în evaluarea soluției optime spre a face față dificultăților, pentru a începe cu modificarea părților mai fragile din noi înșine.",
+    amulet:
+      "Întărește apărarea împotriva dușmanilor exteriori și a celor din lăuntrul nostru. Promovează luciditatea, capaditatea de reflecție, calmul, în evaluarea soluției optime spre a face față dificultăților, pentru a începe cu modificarea părților mai fragile din noi înșine.",
     messagetitle: "Mesajul:",
-    message: "Devenind conștienți de ceea ce ne este mai scump, trebuie să ascuțim armele ca să-i apărăm. Succesul împotriva inamicului se obține atunci când el ne găsește pregătiți.",
+    message:
+      "Devenind conștienți de ceea ce ne este mai scump, trebuie să ascuțim armele ca să-i apărăm. Succesul împotriva inamicului se obține atunci când el ne găsește pregătiți.",
     details: "xxxx",
     detailsdn: "xxx",
     keytitle: "Cunfruntarea cu dușmanul",
-    keyup: "rezistență fizică și putere morală, protecție și apărare, capacitate de regenerare, decizii corecte.",
-    keydn: "fragilitate, conflict, confuzie, atacuri de la dușmani, răutate, situații neprevăzute, suferință fizică.",
+    keyup:
+      "rezistență fizică și putere morală, protecție și apărare, capacitate de regenerare, decizii corecte.",
+    keydn:
+      "fragilitate, conflict, confuzie, atacuri de la dușmani, răutate, situații neprevăzute, suferință fizică.",
   },
   ansuz: {
     title: "Ansuz",
@@ -77,14 +93,17 @@ export const runes: IRunaList = {
     keywords: "Sfat înțelept • Ajutor • Cadou",
     keywordsdn: "Înșelătorie • Falsitate • Perfidie",
     titleamulet: "Folosirea Runei ca Amuletă:",
-    amulet: "Ne întărește capacitatea de a fi creativi, constructivi și de a vedea în mod clar realitatea. Deschide comunicarea noastră cu sfera divină. Crește capacitatea noastră de a comunica cu ceilalți și cu noi înșine. Ne permite să ne exprimăăm esența cu o mai mare libertate.",
+    amulet:
+      "Ne întărește capacitatea de a fi creativi, constructivi și de a vedea în mod clar realitatea. Deschide comunicarea noastră cu sfera divină. Crește capacitatea noastră de a comunica cu ceilalți și cu noi înșine. Ne permite să ne exprimăăm esența cu o mai mare libertate.",
     messagetitle: "Mesajul:",
     message: "xxxxx",
     details: "xxxx",
     detailsdn: "xxx",
     keytitle: "Sunetul sufletului",
-    keyup: "vindecare, comunicare, înțelepciune, inspirație, gândire, spiritualitate, adevăr.",
-    keydn: "înșelăciune, minciuni, răutate, nevroze, trădare, lipsă de loialitate, infidelitate, frică, egoism.",
+    keyup:
+      "vindecare, comunicare, înțelepciune, inspirație, gândire, spiritualitate, adevăr.",
+    keydn:
+      "înșelăciune, minciuni, răutate, nevroze, trădare, lipsă de loialitate, infidelitate, frică, egoism.",
   },
   raido: {
     title: "Raido",

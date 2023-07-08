@@ -274,6 +274,116 @@ const FormuleRunice = () => {
           />
         </div>
       </div>
+      <div>
+        <p>
+         <span className="font-bold">Formulă oglindă</span> - reflectă, întoarce înapoi orice influență, orice acțiune.</p>
+      </div>
+      <div className="flex items-center p-3">
+        <div className="p-4 font-semibold border h-auto flex space-x-2">
+          <img
+            src="/pngs/ISA.png"
+            alt="Image 1"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/KENAZ.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/HAGALAZ.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+                    <img
+            src="/pngs/KENAZ.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+                    <img
+            src="/pngs/ISA.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+        </div>
+      </div>
+      <div>
+        <p>
+         <span className="font-bold">Amuletă feminină pentru dragoste.</span></p>
+      </div>
+      <div className="flex items-center p-3">
+        <div className="p-4 font-semibold border h-auto flex space-x-2">
+          <img
+            src="/pngs/KENAZ.png"
+            alt="Image 1"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/GEBO.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/LAGUZ.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+        </div>
+      </div>
+      <div>
+        <p>
+         <span className="font-bold">Amuletă masculină pentru dragoste.</span></p>
+      </div>
+      <div className="flex items-center p-3">
+        <div className="p-4 font-semibold border h-auto flex space-x-2">
+          <img
+            src="/pngs/KENAZ.png"
+            alt="Image 1"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/GEBO.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/INGUZ.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+        </div>
+      </div>
+      <div>
+        <p>
+         <span className="font-bold">Ajută magicianul în căutările, studiile sale</span></p>
+      </div>
+      <div className="flex items-center p-3">
+        <div className="p-4 font-semibold border h-auto flex space-x-2">
+          <img
+            src="/pngs/EHWAZ.png"
+            alt="Image 1"
+            className="mr-2"
+            width={50}
+          />
+          <img
+            src="/pngs/ANSUZ.png"
+            alt="Image 2"
+            className="mr-2"
+            width={50}
+          />
+        </div>
+      </div>
     </div>
   );
 };
