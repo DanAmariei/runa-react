@@ -9,13 +9,13 @@ const Homepage = () => {
           const runa = runes[key];
           return (
             <Link key={idx} to={`/runa/${key}`}>
-              <div className="p-4 border-2 flex flex-col items-center justify-center
-               border-gray-400 rounded-md bg-gray-50 w-[200px]">
+              <div className="p-4 flex flex-col items-center justify-center
+               border-gray-400 rounded-md w-[90px]">
 
                 <h2 className="font-bold text-xl text-gray-600">{runa.title}</h2>
                 
                 <img
-                className="max-w-[100px]"
+                className="max-w-[80px]"
                  src={runa.image}
                 />
               </div>
