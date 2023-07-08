@@ -5,6 +5,7 @@ import RunaCalcPage from "./pages/RunaCalcPage";
 import SingleRunaPage from "./pages/SingleRunaPage";
 import CristaleEterice from "./pages/CristaleEterice";
 import Calatorii from "./pages/Calatorii";
+import FormuleRunice from "./pages/FormuleRunice";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/runa/:id" element={<SingleRunaPage />} />
         <Route path="/runa-calculator" element={<RunaCalcPage />} />
         <Route path="/Calatorii" element={<Calatorii />} />
+        <Route path="/formulerunice" element={<FormuleRunice />} />
         <Route path="/CristaleEterice" element={<CristaleEterice />} />
       </Routes>
     </>

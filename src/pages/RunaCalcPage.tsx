@@ -3,6 +3,7 @@ import CalculatorForm from "../components/CalculatorForm";
 import RunaImage from "../components/RunaImage";
 import { runes } from "../helper/runes";
 import { runeNames } from "../helper/runenames";
+import { Link } from "react-router-dom";
 
 interface IRunaResult {
   name: string;
@@ -27,6 +28,19 @@ const RunaCalcPage = () => {
     });
     return res;
   };
+  // const getRunaNamesFromSymbols = (runaSymbols: string) => {
+  //   const res: { name: string; link: string }[] = [];
+  
+  //   runaSymbols.split("").forEach((symbol) => {
+  //     const nameOfRuna = runeNames[symbol];
+  //     const lowercaseName = nameOfRuna.toLowerCase();
+  //     const link = `/runa/:id${lowercaseName}`;
+  
+  //     res.push({ name: lowercaseName, link: link });
+  //   });
+  
+  //   return res;
+  // };
 
   const handleFormSubmit = (result: any) => {
     console.log("!! runa calc page. ", result);
@@ -77,11 +91,12 @@ const RunaCalcPage = () => {
                 getRunaNamesFromSymbols(runaResult.runaResult).map(
                   (runaKey, idx) => {
                     const runa = runes[runaKey];
-
-                    return (
+                    return ( 
+                      <Link key={idx} to={`/runa/${runaKey}`}>
                       <div key={idx}>
-                        <img className="max-w-[50px]" src={runa.image} />
+                        <img className="max-w-[50px]" src={runa.image}  />
                       </div>
+                      </Link>
                     );
                   }
                 )}

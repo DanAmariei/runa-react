@@ -16,8 +16,8 @@ const Navigation = () => {
         <Link to={"/Calatorii"}>
           <span>Călătorii</span>
         </Link>
-        <Link to={"/CristaleEterice"}>
-          <span>Cristale Eterice</span>
+        <Link to={"/FormuleRunice"}>
+          <span>Formule ᚱunice</span>
         </Link>
         <Link to={"/CristaleEterice"}>
           <span>Cristale Fizice</span>
