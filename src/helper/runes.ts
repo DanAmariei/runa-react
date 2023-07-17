@@ -183,7 +183,7 @@ export const runes: IRunaList = {
     keywords: "Schimbări • Naștere • Ruptură",
     keywordsdn: "",
     titleamulet: "Folosirea Runei ca Amuletă:",
-    amulet: "Ajută la deblocarea din situații de stagnare și neproductivitate. Ajută la ruperea din tiparele vechi, permițându-ne să intrăm în contact cu cea mai adevărată și mai autentică parte din noi. Ne eliberează din lanțurile care ne țin încătușați înt-un trecut care nu ne ajută să creștem.",
+    amulet: "Ajută la deblocarea din situații de stagnare și neproductivitate. Ajută la ruperea din tiparele vechi, permițându-ne să intrăm în contact cu cea mai adevărată și mai autentică parte din noi. Ne eliberează din lanțurile care ne țin încătușați într-un trecut care nu ne ajută să creștem.",
     messagetitle: "Mesajul:",
     message: "Trebuie să ne mișcăm mai departe fără să ne oprim, chiar dacă trecem printr-o perioadă dificilă, care ne poate speria. Când avem curaj să ne pierdem și să mergem mai departe, renaștem.",
     details: "xxxx",

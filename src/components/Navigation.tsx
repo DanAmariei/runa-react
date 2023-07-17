@@ -1,33 +1,17 @@
 import { Link } from "react-router-dom";
+import RadixDrawer from "./RadixDrawer";
 
 const Navigation = () => {
+  
+
   return (
-    <div
-      className="border-b py-2 px-10 flex justify-between 
-    items-center font-semibold text-lg bg-slate-100 text-gray-800"
-    >
-      <Link to={"/"}>
-        <span>ᚱUNE</span>
-      </Link>
-      <div className="flex items-center gap-4">
-        <Link to={"/runa-calculator"}>
-          <span>ᚱUNE ᚹERSONALE</span>
+    <div className="fixed top-0 left-0 w-full border shadow-sm h-[60px] flex text-sky-900 bg-white px-2 z-10">
+      <div className=" m-auto flex items-center justify-between w-full">
+        <Link to="/">
+          <h2 className="font-bold">Runa</h2>
         </Link>
-        <Link to={"/Calatorii"}>
-          <span>Călătorii</span>
-        </Link>
-        <Link to={"/FormuleRunice"}>
-          <span>Formule ᚱunice</span>
-        </Link>
-        <Link to={"/CristaleEterice"}>
-          <span>Cristale Fizice</span>
-        </Link>
-        <Link to={"/CristaleEterice"}>
-          <span>Reiki</span>
-        </Link>
-        <Link to={"/CristaleEterice"}>
-          <span>Multimedia</span>
-        </Link>
+
+        <RadixDrawer />
       </div>
     </div>
   );

@@ -11,14 +11,14 @@ function App() {
   return (
     <>
       <Navigation />
-      <div className="bg-gradient-to-t from-orange-400 to-sky-400 h-full flex-grow">
+      <div className="bg-gradient-to-t from-orange-400 to-sky-400 h-full flex-grow pt-[60px]">
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/runa/:id" element={<SingleRunaPage />} />
           <Route path="/runa-calculator" element={<RunaCalcPage />} />
-          <Route path="/Calatorii" element={<Calatorii />} />
-          <Route path="/formulerunice" element={<FormuleRunice />} />
-          <Route path="/CristaleEterice" element={<CristaleEterice />} />
+          <Route path="/calatorii" element={<Calatorii />} />
+          <Route path="/formule-runice" element={<FormuleRunice />} />
+          <Route path="/cristale-eterice" element={<CristaleEterice />} />
         </Routes>
       </div>
     </>
