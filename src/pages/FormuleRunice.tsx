@@ -169,7 +169,7 @@ const FormuleRunice = () => {
       </div>
       <div>
         <p>
-          <span className="font-bold">SAR</span> - pelerinaj în căitarea puterii.
+          <span className="font-bold">SAR</span> - pelerinaj în căutarea puterii.
         </p>
       </div>
       <div className="flex items-center p-3">

@@ -14,7 +14,8 @@ const RadixDrawer = () => {
     { name: "HOME", link: "/" },
     { name: "Runa Calculator", link: "/runa-calculator" },
     { name: "Formule Runice", link: "/formule-runice" },
-    { name: "BLOG'S", link: "/" },
+    { name: "Multimedia", link: "/cristale-eterice" },
+    { name: "Călătorii", link: "/calatorii" },
     { name: "CONTACT", link: "/" },
   ];
 
