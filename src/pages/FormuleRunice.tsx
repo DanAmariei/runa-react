@@ -1,7 +1,7 @@
 const FormuleRunice = () => {
   return (
     <div className="max-w-lg p-2 mx-auto">
-      <p className="font-bold p-4">Formule Runice pentru dierse utilități.</p>
+      <p className="font-bold p-4">Formule ᚱunice Magice.</p>
       <div>
         <p>
           Asigură forță și energie, ajută la atingerea scopului propus, asigură

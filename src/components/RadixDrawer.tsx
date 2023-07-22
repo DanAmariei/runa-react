@@ -11,11 +11,13 @@ const RadixDrawer = () => {
   const [open, setOpen] = React.useState(false);
 
   let links = [
-    { name: "HOME", link: "/" },
-    { name: "Runa Calculator", link: "/runa-calculator" },
-    { name: "Formule Runice", link: "/formule-runice" },
-    { name: "Multimedia", link: "/cristale-eterice" },
+    { name: "ᚱuna", link: "/" },
+    { name: "ᚱuna Calculator", link: "/runa-calculator" },
+    { name: "ᚨormule ᚱunice", link: "/formule-runice" },
+    { name: "ᛖultimedia", link: "/cristale-eterice" },
     { name: "Călătorii", link: "/calatorii" },
+    { name: "Galerie", link: "/" },
+    { name: "ᛖagazin", link: "/" },
     { name: "CONTACT", link: "/" },
   ];
 
@@ -63,7 +65,7 @@ const RadixDrawer = () => {
                  py-2 max-w-[260px]"
             >
               <Dialog.Title className="flex items-center h-[60px]">
-                <p className="text-base font-bold">Runa</p>
+                <p className="text-base font-bold px-3">ᚱuna</p>
                 <Dialog.Close asChild>
                   <button
                     className="cursor-pointer hover:bg-slate-200 rounded-full p-1 flex justify-center items-center ml-auto"
