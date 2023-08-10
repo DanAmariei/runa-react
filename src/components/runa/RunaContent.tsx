@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { IRuna } from "../../helper/runes";
 
 interface IRunContentProps {
@@ -5,8 +6,15 @@ interface IRunContentProps {
 }
 
 const RunaContent = ({ runa }: IRunContentProps) => {
+
+  const navigate = useNavigate();
   return (
     <div className="border flex-grow p-4">
+      <div>
+        <button className="border p-2" onClick={() => {
+          navigate(-1);
+        }}>navigate back</button>
+      </div>
       <h2 className=" text-5xl text-purple-700 font-bold py-2">
         {runa?.title}
         <p className="italic text-xl font-thin px-7 py-2">{runa?.keywords}</p>

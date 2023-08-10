@@ -3,7 +3,7 @@ import CalculatorForm from "../components/CalculatorForm";
 import RunaImage from "../components/RunaImage";
 import { runes } from "../helper/runes";
 import { runeNames } from "../helper/runenames";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface IRunaResult {
   name: string;
@@ -18,6 +18,8 @@ interface IRunaResult {
 const RunaCalcPage = () => {
   const [runaNumber, setRunaNumber] = useState(0);
   const [runaResult, setRunaResult] = useState<IRunaResult | null>(null);
+
+  const navigate = useNavigate();
 
   const getRunaNamesFromSymbols = (runaSymbols: string) => {
     const res: string[] = [];
@@ -61,6 +63,7 @@ const RunaCalcPage = () => {
             focus:ring-offset-2 focus:ring-purple-900"
             onClick={() => {
               setRunaNumber(0);
+              navigate('/runa-calculator');
             }}
           >
             Calculate another one

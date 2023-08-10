@@ -1,6 +1,12 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { runeNames } from "../helper/runenames";
 import { musicNotes } from "../helper/musicnotes";
+import {
+  createSearchParams,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 
 const alphabet = "aăâbcdefghiîjklmnopqrsștțuvwxyz";
 
@@ -15,6 +21,32 @@ const CalculatorForm = ({ onSubmit }: IPropsCalculatorForm) => {
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
   const [birthdate, setBirthdate] = useState("");
+
+  const [searchParams] = useSearchParams();
+  const nameParam = searchParams.get("name");
+  const firstNameParam = searchParams.get("firstName");
+  const secondNameParam = searchParams.get("secondName");
+  const birthdateParam = searchParams.get("birthdate");
+
+  const [initialized, setInitialized] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (nameParam && firstNameParam && secondNameParam && birthdateParam) {
+      setName(nameParam);
+      setSecondName(secondNameParam);
+      setFirstName(firstNameParam);
+      setBirthdate(birthdateParam);
+      setInitialized(true);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (initialized) {
+      calculateRunaResult();
+    }
+  }, [initialized]);
 
   // sums all digits of a number and returns the result
   const sumNumberDigits = (num: number) => {
@@ -162,16 +194,7 @@ const CalculatorForm = ({ onSubmit }: IPropsCalculatorForm) => {
     return res;
   };
 
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault();
-    // Perform form submission logic here
-    console.log("Form submitted:", {
-      name,
-      firstName,
-      secondName,
-      birthdate,
-    });
-
+  const calculateRunaResult = () => {
     const numeAsNumbers = nameToNumbersSmall(name);
     const prenumeAsNumbers = nameToNumbersSmall(firstName);
     const prenume2AsNumbers = nameToNumbersSmall(secondName);
@@ -228,6 +251,22 @@ const CalculatorForm = ({ onSubmit }: IPropsCalculatorForm) => {
     };
 
     onSubmit(result);
+  };
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+
+    const params = {
+      name,
+      firstName,
+      secondName,
+      birthdate,
+    };
+
+    navigate({
+      pathname: "/runa-calculator",
+      search: `?${createSearchParams(params)}`,
+    });
   };
 
   return (

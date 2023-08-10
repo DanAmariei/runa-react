@@ -120,7 +120,7 @@ const RunaImage = (props: IPropsRunaImage) => {
           fill="#cce7ff"
           fillOpacity="0.2"
           stroke="#858585"
-          stroke-width="5"
+          strokeWidth="5"
         />
         {lines}
 
